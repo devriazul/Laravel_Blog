@@ -25,4 +25,8 @@ class SiteController extends Controller
     {
         return view('SiteView', ['firstkey' => $firstName, 'middlekey' => $middleName, 'lastkey' => $lastName]);
     }
+    public function profileName($profileName)
+    {
+        return view('RiazProfile', ['namekey' => $profileName]);
+    }
 }
