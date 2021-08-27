@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use Illuminate\Routing\RouteGroup;
@@ -52,3 +53,8 @@ Route::get('/single', MyController::class);
 
 
 Route::resource('/photos', PhotoController::class);
+
+//Custom Controller
+
+Route::get('/love', [HomeController::class, 'myself']);
+Route::get('/loveu', [HomeController::class, 'yourself']);
