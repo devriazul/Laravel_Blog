@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use Illuminate\Routing\RouteGroup;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\PhotoController;
 
 //Simple route
 
@@ -19,7 +20,7 @@ Route::get('/about', [SiteController::class, 'about']);
 
 // Multi parameter route
 
-Route::get('/{firstName}/{middleName}/{lastName}', [SiteController::class, 'myName']);
+// Route::get('/{firstName}/{middleName}/{lastName}', [SiteController::class, 'myName']);
 
 // Group Route
 
@@ -46,3 +47,8 @@ Route::group(['prefix' => 'accounts'], function () {
 //Single action controller
 
 Route::get('/single', MyController::class);
+
+//Resource Controller
+
+
+Route::resource('/photos', PhotoController::class);
