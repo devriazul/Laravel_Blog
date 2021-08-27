@@ -2,4 +2,5 @@
 
 <a href="{{url('/')}}">Home Page</a> <br>
 <a href="{{url('/about')}}">About Page</a> <br>
-<a href="{{url('/contact')}}">Contact Page</a>
+<a href="{{url('/contact')}}">Contact Page</a> <br>
+<a href="{{url('/riaz')}}">Riaz Profile</a>

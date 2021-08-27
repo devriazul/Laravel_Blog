@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
 
 
 
-Route::get('/', [\App\Http\Controllers\SiteController::class, 'home']);
+Route::get('/', [SiteController::class, 'home']);
 
-Route::get('/contact', [\App\Http\Controllers\SiteController::class, 'contact']);
+Route::get('/contact', [SiteController::class, 'contact']);
 
-Route::get('/about', [\App\Http\Controllers\SiteController::class, 'about']);
+Route::get('/about', [SiteController::class, 'about']);
 
-Route::get('/{profileName}', [\App\Http\Controllers\SiteController::class, 'profileName']);
+Route::get('/{profileName}', [SiteController::class, 'profileName']);
 
-Route::get('/{firstName}/{middleName}/{lastName}', [\App\Http\Controllers\SiteController::class, 'myName']);
+Route::get('/{firstName}/{middleName}/{lastName}', [SiteController::class, 'myName']);
