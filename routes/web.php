@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use Illuminate\Routing\RouteGroup;
+use App\Http\Controllers\MyController;
 
 //Simple route
 
@@ -14,7 +15,7 @@ Route::get('/about', [SiteController::class, 'about']);
 
 // Parameter
 
-Route::get('/{profileName}', [SiteController::class, 'profileName']);
+// Route::get('/{profileName}', [SiteController::class, 'profileName']);
 
 // Multi parameter route
 
@@ -41,3 +42,7 @@ Route::group(['prefix' => 'accounts'], function () {
         return "Update";
     });
 });
+
+//Single action controller
+
+Route::get('/single', MyController::class);
