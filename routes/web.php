@@ -10,4 +10,4 @@ Route::get('/contact', [\App\Http\Controllers\SiteController::class, 'about']);
 
 Route::get('/about', [\App\Http\Controllers\SiteController::class, 'about']);
 
-Route::get('/{name}', [\App\Http\Controllers\SiteController::class, 'name']);
+Route::get('/{firstName}/{middleName}/{lastName}', [\App\Http\Controllers\SiteController::class, 'myName']);

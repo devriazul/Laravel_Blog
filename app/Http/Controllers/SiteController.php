@@ -21,8 +21,8 @@ class SiteController extends Controller
     {
         return view('ContactPage');
     }
-    public function Name($name)
+    public function myName($firstName, $middleName, $lastName)
     {
-        return $name;
+        return "First Name: " . $firstName . "<br> Middle Name: " . $middleName . "<br> Last Name: " . $lastName;
     }
 }
