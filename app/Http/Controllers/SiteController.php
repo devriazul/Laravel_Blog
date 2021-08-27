@@ -23,6 +23,6 @@ class SiteController extends Controller
     }
     public function myName($firstName, $middleName, $lastName)
     {
-        return "First Name: " . $firstName . "<br> Middle Name: " . $middleName . "<br> Last Name: " . $lastName;
+        return view('SiteView', ['firstkey' => $firstName, 'middlekey' => $middleName, 'lastkey' => $lastName]);
     }
 }
