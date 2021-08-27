@@ -21,10 +21,12 @@ class SiteController extends Controller
     {
         return view('ContactPage');
     }
+
     public function myName($firstName, $middleName, $lastName)
     {
         return view('SiteView', ['firstkey' => $firstName, 'middlekey' => $middleName, 'lastkey' => $lastName]);
     }
+
     public function profileName($profileName)
     {
         return view('RiazProfile', ['namekey' => $profileName]);
