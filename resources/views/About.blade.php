@@ -1,13 +1,23 @@
-@if ($LoginStatusKey == true)
+@foreach ($Datakey as $CountryName)
 
-<h1>You are logged in!</h1>
+{{-- Index --}}
 
-@elseif ($LoginStatusKey==false)
+{{-- {{$loop->index}} --}}
 
-<h1>You are not logged in!</h1>
+{{-- Loop Count --}}
 
-@else
+{{-- {{$loop->count}} --}}
 
-<h1>Login Status Not Found!</h1>
+{{-- @if ($loop->even) --}}
+{{-- @if ($loop->odd) --}}
+{{-- @if ($loop->first) --}}
+@if ($loop->last)
+
+{{ $CountryName}}
+
+@break
 
 @endif
+
+
+@endforeach

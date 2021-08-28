@@ -8,7 +8,7 @@ class AboutController extends Controller
 {
     function about()
     {
-        $Data = array("Bangladesh", "India");
+        $Data = array("Bangladesh", "India", "Sri Lanka", "Bhutan");
 
         $LoginStatus = false;
 
