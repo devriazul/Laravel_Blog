@@ -1,23 +1,11 @@
-@foreach ($Datakey as $CountryName)
+@php
 
-{{-- Index --}}
+$num1=10;
+$num2=20;
 
-{{-- {{$loop->index}} --}}
+$result = $num1+$num2;
+echo $result;
 
-{{-- Loop Count --}}
+// echo time();
 
-{{-- {{$loop->count}} --}}
-
-{{-- @if ($loop->even) --}}
-{{-- @if ($loop->odd) --}}
-{{-- @if ($loop->first) --}}
-@if ($loop->last)
-
-{{ $CountryName}}
-
-@break
-
-@endif
-
-
-@endforeach
+@endphp
