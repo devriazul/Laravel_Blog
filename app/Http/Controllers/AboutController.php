@@ -8,7 +8,8 @@ class AboutController extends Controller
 {
     function about()
     {
-        $NewHeadLine = "<h1>Bangladesh won by 100 runs";
-        return view('About', ['NewHeadLinekey' => $NewHeadLine]);
+        $Data = array("Bangladesh", "India", "Canada", "America");
+
+        return view('About', ['Datakey' => $Data]);
     }
 }
