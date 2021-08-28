@@ -8,8 +8,10 @@ class AboutController extends Controller
 {
     function about()
     {
-        $Data = array();
+        $Data = array("Bangladesh", "India");
 
-        return view('About', ['Datakey' => $Data]);
+        $LoginStatus = false;
+
+        return view('About', ['Datakey' => $Data, 'LoginStatusKey' => $LoginStatus]);
     }
 }

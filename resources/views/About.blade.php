@@ -1,19 +1,13 @@
-{{-- <select name="" id="">
+@if ($LoginStatusKey == true)
 
-@foreach ($Datakey as $CountryName )
-   <option value="">{{$CountryName}}</option>
-@endforeach
+<h1>You are logged in!</h1>
 
-</select>
- --}}
+@elseif ($LoginStatusKey==false)
 
+<h1>You are not logged in!</h1>
 
- @forelse ($Datakey as $CountryName)
+@else
 
-<li>{{$CountryName}}</li>
+<h1>Login Status Not Found!</h1>
 
- @empty
-
- <p>No Data Found</p>
-
- @endforelse
+@endif
